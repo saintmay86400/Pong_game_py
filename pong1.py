@@ -3,7 +3,7 @@
 # Part1
 
 import turtle
-import os
+import os # -os on Mac -winsound on Windows
 
 wn = turtle.Screen()
 wn.title("Pong by Mario Wayne Santomaggio")
@@ -94,7 +94,7 @@ while True:
     if ball.ycor() > 290:
         ball.sety(290)
         ball.dy *= -1
-        os.system("afplay ping_pong_bounce.wav&")
+        os.system("afplay ping_pong_bounce.wav&") # on Windows change with winsound.PlaySound("ping_pong_bounce.wav", winsound.SND_ASYNC)
 
     if ball.ycor() < -290:
         ball.sety(-290)
